@@ -1,0 +1,191 @@
+
+    body{
+        background-color: #1a1919;
+    }
+
+    /* De sectie met muziek */
+    .music-section {
+    padding: 80px 0;
+    background-color: hsl(0, 2%, 10%);
+    color: white;
+}
+
+/* De navigatiebalk */
+.menu {
+    position: relative;
+    display: inline-block;
+    margin: 40px;
+}
+
+/* De knop voor het menu */
+.menu-knop {
+    font-family: "Bangers";
+    color: darkgreen;
+    font-size: 40px;
+    cursor: pointer;
+    padding: 15px 20px;
+    background-color: #1a181ac2;
+}
+
+/* Het menu is standaard verborgen */
+.menu-inhoud {
+    font-family: "Bangers";
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #1a1919;
+    min-width: 200px;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+}
+
+/* Het menu schuift open bij hover */
+.menu:hover .menu-inhoud {
+    max-height: 200px;
+    opacity: 1;
+}
+
+/* De inhoud van het menu */
+.menu-inhoud a {
+    font-family: "Bangers";
+    font-size: 30px;
+    color: rgb(255, 119, 0);
+    padding: 15px 20px;
+    text-decoration: none;
+}
+
+/* Kleur verandert als je over een link hovert */
+.menu-inhoud a:hover {
+    background-color: rgb(255, 149, 0);
+}
+/* De sectie met muziek */
+.music-section h2 {
+    color: darkgreen;
+    font-family: "Bangers";
+    font-size: 48px;
+    margin-left: 60px;
+    margin-bottom: 40px;
+}
+
+/* De rij met albums */
+.album-row {
+    display: flex;
+    gap: 30px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    padding: 0 60px 30px 60px;
+
+    scroll-behavior: smooth;
+}
+
+/* De individuele albums */
+.album {
+    position: relative;
+    flex: 0 0 400px;
+    overflow: hidden;
+}
+
+/* De albumafbeeldingen */
+.album img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+
+    transition: transform 0.3s ease;
+}
+
+/* De tekst die verschijnt bij hover */
+.album-text{
+position: absolute;
+bottom: 0;
+left: 0;
+
+width: 100%;
+padding: 30px 20px;
+
+box-sizing: border-box;
+
+background: #1a1919;
+color: white;
+
+opacity: 0;
+transform: translateY(20px);
+
+transition: all 0.3s ease;
+}
+
+/* De tekst verschijnt bij hover */
+.album:hover .album-text{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* De tekst in de album-overlay */
+.album-text h3 {
+    font-family: "Bangers";
+    font-size: 24px;
+    margin: 0 0 10px 0;
+    color: rgb(255, 119, 0);
+}
+
+/* De paragraaf in de album-overlay */
+.album-text p {
+    margin: 0;
+    font-family: "Bangers";
+    font-size: 15px;
+    line-height: 1.5;
+    color: rgb(255, 149, 0);
+}
+
+/* De afbeelding vergroot bij hover */
+.album:hover img {
+    transform: scale(1.03);
+}
+
+/* De blog-sectie */
+.blog-title {
+    color: darkgreen;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 48px;
+    padding-left: 60px;
+}
+
+/* De tekst in de blog-sectie */
+.blog-text {
+    color:rgb(255, 119, 0);
+    max-width: 600px;
+    padding-left: 60px;
+    font-size: 18px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* De microfoon-afbeelding */
+.microfoon-afbeelding {
+    width: 600px;
+    gap: 20px;
+    padding-right: 100px;
+    display: flex;
+    align-items: center;
+    float:right;
+    border-radius:40px;
+    border-right: 40px;
+}
+
+/* De bronnenlijst */
+.bronnenlijst {
+    color: darkgreen;
+    font-family: "Bangers";
+    font-size: 28px;
+    margin-left: 60px;
+    margin-bottom: 40px;
+}
+
+/* De links in de bronnenlijst */
+.links {
+    list-style-type: none;
+    padding-left: 60px;
+}
